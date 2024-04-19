@@ -84,12 +84,36 @@ body {
   background-color: var(--blue);
   grid-row: span 2;
   display: grid;
-  grid-template: repeat(11, auto) 6fr/ 1fr 3fr; /* Adjusted height */
+  grid-template: 1fr 1fr repeat(6, 1fr) repeat(3, 1fr) 6fr/ 1fr 3fr;
   color: white;
   padding: 2vh;
   align-items: center;
   font-weight: 600;
-  gap: 3vh;
+  row-gap: 2vh;
+  column-gap: 10px;
+}
+
+#sidebar div {
+  display: flex;
+  align-items: center;
+}
+
+#sidebar div:nth-child(odd) {
+  justify-content: center;
+}
+
+#sidebar div:nth-child(even) {
+}
+
+#sidebar div img {
+  filter: invert(100%) contrast(100%);
+  height: 3vh;
+  width: auto;
+}
+
+#sidebar div:first-child img {
+  height: 5vh;
+  width: auto;
 }
 
 /* Main Content Styles */
@@ -198,6 +222,7 @@ body {
   border-radius: var(--border-rad-default);
   overflow: hidden;
   display: grid;
+  padding: 10px;
 }
 
 .trending.card-holder .card {
@@ -209,6 +234,20 @@ body {
   grid-row: span 2;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.trending.card-holder .card div:nth-child(2n) {
+  display: flex;
+  align-items: flex-end;
+}
+
+.trending .card div:nth-child(n + 2) {
+  font-size: 0.5rem;
+}
+
+.trending .card div:nth-child(n + 3) {
+  color: var(--subtext-color);
 }
 
 .projects .card,
