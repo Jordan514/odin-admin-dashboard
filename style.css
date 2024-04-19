@@ -283,29 +283,35 @@ body {
   padding: 10px;
 }
 
-.trending.card-holder .card {
+.trending .card {
   display: grid;
   grid-template: 1fr 1fr / 1fr 3fr;
 }
 
-.trending.card-holder .card div:first-child {
+.trending .card div:first-child {
   grid-row: span 2;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
-.trending.card-holder .card div:nth-child(2n) {
-  display: flex;
+.trending .card div img {
+  height: 5vh;
+}
+
+.trending .card div:nth-child(2n) {
   align-items: flex-end;
 }
 
 .trending .card div:nth-child(n + 2) {
-  font-size: 0.5rem;
+  font-size: 0.7rem;
+  display: flex;
 }
 
 .trending .card div:nth-child(n + 3) {
   color: var(--subtext-color);
+  align-items: flex-start;
 }
 
 .projects .card,
