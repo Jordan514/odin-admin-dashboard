@@ -32,24 +32,59 @@ body {
 /* Header Styles */
 #header {
   display: grid;
-  grid-template: auto 1fr/ 1fr; /* Adjusted height */
+  grid-template: 1fr 2fr/ 1fr; /* Adjusted height */
   box-shadow: var(--box-shadow-default);
   position: relative;
+  height: 20vh;
+  padding-top: 1vh;
+  padding-left: 3vw;
+  padding-right: 3vw;
 }
 
 #header .top,
 #header .bottom {
   display: grid;
-  grid-template: 1fr / 1fr 4fr 1fr 1fr 1fr;
+  grid-template: 1fr / 0.4fr 5fr 1fr 0.8fr 1fr;
   align-items: center;
 }
 
-#header .bottom {
+#header .top div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#header .top .icon {
+  height: 3vh;
+}
+
+#header .top .profile-pic {
+  height: 8vh;
+}
+
+#header .top input {
+  border-radius: 50px;
+  border: none;
+  background-color: #e3e8ef;
+  height: 50%;
+}
+
+#header .top div:nth-child(10n + 3) {
+  justify-content: flex-end;
+}
+
+#header .top div:nth-child(10n + 5) {
+  justify-content: flex-start;
+  font-weight: 600;
+}
+
+#header .bottom img {
+  height: 10vh;
 }
 
 #header .welcome {
   display: grid;
-  grid-template: 1fr 2fr/1fr;
+  grid-template: 1fr 1fr/1fr;
   justify-content: center;
 }
 
@@ -74,9 +109,10 @@ body {
   background-color: var(--blue);
   border: none;
   border-radius: 25px;
-  padding: 6px 16px;
-
+  padding: 1.5vh 2vw;
   color: white;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 /* Sidebar Styles */
@@ -100,9 +136,6 @@ body {
 
 #sidebar div:nth-child(odd) {
   justify-content: center;
-}
-
-#sidebar div:nth-child(even) {
 }
 
 #sidebar div img {
